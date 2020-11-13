@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en-US">
+
+<!--  AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
 <head>
-
-<title>Stephen Burgess - Portfolio</title>
-
+  <!-- meta data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="author" content="Stephen Burgess">
+  
+  <!--  css -->
+  <link rel="stylesheet" href="css/index.css">
+  <!--  link rel="stylesheet" href="css/home.css"-->
+  
+  <title>Stephen Burgess - Portfolio</title>
 </head>
 
-<body>
-
-
+<body data-ng-app="ngApp">
+  
+  <script src="js/ngApp.js"></script>
+  
+  <header>    
+    <!-- search bar -->
+    <nav class="searchbar">
+      <h1>Stephen Burgess</h1>
+    </nav>  
+    <!--  menu bar -->  
+    <nav class="navbar">  
+      <ul>
+        <li><a class="navbarActive" href="#!">Home</a></li>
+        <li><a href="#!about">About</a></li>
+        <li><a href="#!projects">Projects</a></li>
+        <li><a href="#!experience">Experience</a></li>
+        <li><a href="#!contact">Contact</a></li>     
+      </ul>
+    </nav>      
+  </header>
+  
+  <div data-ng-view></div>
+  
+  <footer>
+    <ul>
+        <li><a href="https://www.linkedin.com/in/stephenburgess89/">LinkedIn</a></li>
+        <li><a href="https://github.com/StephenBurgess89">gitHub</a></li>
+        <li><a href="https://drive.google.com/file/d/1MjEW3aLQVFCBhfxUnK7iOptmE4mn3tTJ/view?usp=sharing">CV</a></li>   
+      </ul>
+  </footer>
+    
 </body>
+
 </html>
