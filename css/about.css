@@ -1,0 +1,14 @@
+.bio { 
+  background-color: var(--colorOne);
+  overflow: auto;
+}
+
+.aboutLeft {
+  float: left;
+  width: 70%;
+}
+
+.aboutRight {
+  float: right;
+  width: 30%;
+}

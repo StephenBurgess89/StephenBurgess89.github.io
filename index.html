@@ -1,54 +1,138 @@
 <!DOCTYPE html>
 
-<html lang="en-US">
-
-<!--  AngularJS -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<html lang="en">
 
 <head>
-  <!-- meta data -->
+  
+  <title>Stephen Burgess - Portfolio</title>
+  
+  <!-- meta data -->  
+  <meta name="author" content="Stephen Burgess">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <meta name="author" content="Stephen Burgess">
+ 
+  <!--  AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   
   <!--  css -->
   <link rel="stylesheet" href="css/index.css">
-  <!--  link rel="stylesheet" href="css/home.css"-->
-  
-  <title>Stephen Burgess - Portfolio</title>
+
 </head>
 
-<body data-ng-app="ngApp">
-  
-  <script src="js/ngApp.js"></script>
-  
-  <header>    
-    <!-- search bar -->
-    <nav class="searchbar">
-      <h1>Stephen Burgess</h1>
-    </nav>  
-    <!--  menu bar -->  
-    <nav class="navbar">  
-      <ul>
-        <li><a class="navbarActive" href="#!">Home</a></li>
-        <li><a href="#!about">About</a></li>
-        <li><a href="#!projects">Projects</a></li>
-        <li><a href="#!experience">Experience</a></li>
-        <li><a href="#!contact">Contact</a></li>     
-      </ul>
-    </nav>      
-  </header>
-  <div data-ng-view></div>
-  
-  <footer>
-    <ul>
-        <li><a href="https://www.linkedin.com/in/stephenburgess89/">LinkedIn</a></li>
-        <li><a href="https://github.com/StephenBurgess89">gitHub</a></li>
-        <li><a href="https://drive.google.com/file/d/1TABlnDRKzhdL7AIwi3azswzGfJUiJ05X/view?usp=sharing">CV</a></li>   
-      </ul>
-  </footer>
+
+<body class="bodyBox">
+
+  <script src="js/index.js"></script>
     
+    <!-- 
+    <header>
+      <h1>Stephen Burgess - </h1>
+      <h2>Data Analytics and Software Development.</h2>
+    </header>
+    -->
+    
+    <nav class="navBar">
+      <section class = "navBox" id = "navboxOne">
+        <a href="#!">Stephen Burgess</a>
+      </section>
+      <section class = "navBox" id = "navboxTwo">
+        <nav class="menu" id="menuTop">              
+          <a href="#aboutMeLink">About Me</a>
+          <a href="#skillsLink">Skills</a>
+          <!--   <a href="#articlesLink">Articles</a> -->
+          <a href="#projectsLink">Projects</a>
+          <a href="#contactLink">Contact</a>           
+        </nav> 
+      </section>
+      <section class = "navBox" id = "navboxThree">
+        <button class="menuIcon" onclick="toggleMenu()">
+           <div></div>
+           <div></div>
+           <div></div>      
+        </button>
+      </section>  
+    </nav>
+    
+    <main class =" content" data-ng-view>
+      
+      <article class = "outerPanelBio" id="aboutMeLink">
+        <section class = "innerPanelBio">
+          <figure>
+            <img src="img/headshot.png" alt="Headshot">
+          </figure>
+        </section>
+        <section class = "innerPanelBio">
+          <article>
+            <h2>About Me:</h2>
+            <p>Hi, I'm Stephen and I am interested in Software Development and
+            Data Science.<br><br> I hold a degree in Computer Science (Georgia State University, 
+            Atlanta, Ga) with a focus on Machine Learning and Database management.<br><br>           
+            I am constantly upskilling and developing my talents, and
+            I'm always excited about any opportunities to apply my skills
+            and versatility to new and interesting projects.<br><br>
+            Feel free to get in touch via 
+            <a href="https://www.linkedin.com/in/stephenburgess89/" target="_blank">LinkedIn</a> 
+            or by <a href="mailto:stephenburgess89@gmail.com" target="_blank">E-mail</a>.
+            </p>
+          </article>
+        </section>
+      </article>
+      
+      <!--  
+      <article class = "outerPanelSkills" id="skillsLink">
+        <section class = "innerPanelSkills">
+          <figure>
+          
+          </figure>
+          <article>
+            <h2>Data Analytics:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
+        </section>
+        <section class = "innerPanelSkills">
+          <figure>
+          
+          </figure>
+          <article>
+            <h2>Data Analytics:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
+        </section>
+        <section class = "innerPanelSkills">
+          <figure>
+          
+          </figure>
+          <article>
+            <h2>Data Analytics:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
+        </section>
+        <section class = "innerPanelSkills">
+          <figure>
+          
+          </figure>
+          <article>
+            <h2>Data Analytics:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
+        </section>                   
+      </article> 
+      -->
+      <div id="underConstruction">
+       <h2>Under Construction.</h2>
+      </div>
+      
+      <footer id="contactLink">      
+        <a href="https://www.linkedin.com/in/stephenburgess89/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/StephenBurgess89" target="_blank">GitHub</a>
+        <a href="https://drive.google.com/file/d/1MjEW3aLQVFCBhfxUnK7iOptmE4mn3tTJ/view?usp=sharing" target="_blank">CV</a>       
+      </footer>     
+      
+    </main>
+    
+
 </body>
 
 </html>
+

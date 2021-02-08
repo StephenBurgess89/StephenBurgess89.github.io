@@ -1,0 +1,142 @@
+:root {
+  --colorOne: #F5F5F5;
+  --colorTwo: #25274D; 
+}
+
+html {
+  box-sizing: border-box; 
+}
+
+body { 
+  background-color: var(--colorOne);
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: var(--colorTwo);
+  margin: 0;
+  height: 100%;
+}
+
+.bodyBox {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+header {
+  border-style: dotted;
+  border-width: 0.1em;
+  border-color: var(--colorTwo);
+  flex: 0 1 auto;
+  padding: 0.2em 0 0.2em 0; 
+  background-color: inherit;
+  top: 0;
+  position: sticky;
+  display: flex;
+}
+header a {
+  color: var(--colorTwo);
+  text-decoration: none;
+}
+
+.navBox {
+  display: flex;
+  align-items: center;
+  justify-content: safe space-between;
+}
+#navboxOne, #navboxThree {
+  padding: 0 0.5em 0 0.5em;
+  flex: 1;
+}
+#navboxOne {
+  justify-content: flex-start;
+}
+#navboxTwo {
+
+}
+#navboxThree {
+  justify-content: flex-end;
+}
+.navbar {
+  display: flex; 
+}
+.navbar a{
+  padding: 0.5em 1.5em 0.5em 1.5em;
+}
+.navbar a:not(:first-child) {
+  border-left: 1px solid var(--colorTwo);
+}
+.navbar a:hover {
+  background-color: var(--colorTwo);
+  color: var(--colorOne);
+}
+
+.menuIcon {
+  display: none;
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+.menuIcon div {
+  width: 1.8em;
+  height: 0.3em;
+  background-color: var(--colorTwo);
+  margin:  0.2em 0;
+}
+.menuIcon:hover {
+  transform: scale(1.1); 
+}
+.menuIcon:active {
+  transform: translateX(-0.2em);
+}
+
+@media screen and (max-width: 800px) {
+  .navbar a {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .navbar.mobile {
+    flex-direction: column;
+  }
+  .navbar.mobile a {
+    display: block;
+    border-left: none;
+    text-align: center;
+  }
+  .navBox.mobile {
+    align-items: flex-start;
+  }
+}
+
+#mainBlock {
+
+
+}
+
+footer {
+  flex: 0 1 40px;
+  background-color: grey;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;	
+}
+footer ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+footer li {
+  float: left;
+}
+footer li a {
+  color: var(--colorTwo);
+  padding: 1rem;
+  display: block;
+}
+
